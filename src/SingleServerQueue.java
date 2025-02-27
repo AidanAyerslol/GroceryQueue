@@ -1,26 +1,29 @@
 public class SingleServerQueue {
     //Put queue here when ya do that
     private Job jobinservice;
-    private double nextendservicetime;
+    private int nextendservicetime;
     private RandomDistribution servicetimedistribution;
+
+    private LinkedList checkoutline;
 
     public SingleServerQueue(RandomDistribution serviceTimeDistribution) {
         this.servicetimedistribution = serviceTimeDistribution;
         jobinservice = null;
-        nextendservicetime = Double.MAX_VALUE;
+        nextendservicetime = 1000000000;
+        checkoutline = new LinkedList();
     }
 
     public void add(Job job, double currenttime) {
-        //TODO: If no other jobs are going on, jump to service right away. Otherwise, add to queue and schedule service time
+        //TODO: If no other jobs are going on,generate a service time, and jump to service right away. Otherwise, add to queue and schedule service time
     }
 
-    public double getEndServiceTime() {
-        //TODO: Return time that current job is estimated to end, or Double.MAX_VALUE if no job in service
+    public double getEndServiceTime(RandomDistribution servicetimedistribution) {
+        //TODO: Generate an end service time using normal distribution
         return nextendservicetime;
     }
 
     public Job complete(double currentTime) {
-        //TODO: Complete job in service, record finish time, start next queued up job and update nextEndServiceTime
+        //TODO: Complete job in service, record finish time, start next queued up job and run generate service time
         return null;
     }
 }

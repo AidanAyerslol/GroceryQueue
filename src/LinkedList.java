@@ -1,10 +1,11 @@
-public class LinkedList<T extends Comparable<T>> { //This function is mostly from my 201 database project, but redone to be generic. -C
+
+public class LinkedList { //This function is mostly from my 201 database project, but redone to be generic. -C
     private class Node {
-        T data;
+        Job job;
         Node next;
 
-        public Node(T data) {
-            this.data = data;
+        public Node(Job data) {
+            this.job = data;
             this.next = null;
         }
     }
@@ -18,19 +19,19 @@ public class LinkedList<T extends Comparable<T>> { //This function is mostly fro
     }
 
     //Sorted insert
-    public void add(T newdata) {
+    public void add(Job newdata) {
         Node newnode = new Node(newdata);
 
         //If (list is empty or newData should be at beginning)
-        if(head == null || newdata.compareTo(head.data) < 0) {
+        if(head == null) {
             newnode.next = head;
             head = newnode;
             return;
         }
 
         //Traverse to find correct insert point
-        Node temp = head;
-        while(temp.next != null && newdata.compareTo(temp.next.data) >= 0) {
+        Node temp = head; 
+        while(temp.next != null){
             temp = temp.next;
         }
         newnode.next = temp.next;
@@ -41,12 +42,12 @@ public class LinkedList<T extends Comparable<T>> { //This function is mostly fro
         current = head;
     }
 
-    public T next() {
+    public Job next() {
         if(current == null) {
             return null;
         }
 
-        T data = current.data;
+        Job data = current.job;
         current = current.next;
         return data;
     }
