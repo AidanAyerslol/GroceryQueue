@@ -1,3 +1,4 @@
+
 public class LinkedList { //This function is mostly from my 201 database project, but redone to be generic. -C
     private class Node {
         Job job;
@@ -29,7 +30,7 @@ public class LinkedList { //This function is mostly from my 201 database project
         }
 
         //Traverse to find correct insert point
-        Node temp = head;
+        Node temp = head; 
         while(temp.next != null){
             temp = temp.next;
         }

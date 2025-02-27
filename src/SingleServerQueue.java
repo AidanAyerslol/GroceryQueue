@@ -6,7 +6,6 @@ public class SingleServerQueue {
 
     private LinkedList checkoutline;
 
-    }
     public SingleServerQueue(RandomDistribution serviceTimeDistribution) {
         this.servicetimedistribution = serviceTimeDistribution;
         jobinservice = null;
