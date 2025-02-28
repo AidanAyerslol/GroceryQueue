@@ -15,7 +15,7 @@ public class NormalDistribution extends RandomDistribution {
     }
 
     //Textbook uses Central Limit Theorem method to approximate normal, Box-Muller transform is more efficient since it directly generates a sample,
-    // and is more precise because it doesn't sum uniform numbers.
+    // and is more precise because it doesn't sum uniform numbers. Based on the JavaScript example shown on the Box-Muller transform Wikipedia article.
     @Override public double sample() {
         if(hasSpare) { hasSpare = false; return mean + Math.sqrt(variance) * spare; }
 
