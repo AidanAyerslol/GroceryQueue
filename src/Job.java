@@ -1,22 +1,19 @@
 public class Job {
-  
-    private int joinlinetime;
-    private int paidtime;
-    private Customer customer;
+    private double timeOfCreation;
+    private double serviceLength;
+    private double endTime;
+    private int jobID;
 
-    public Job(int arrivaltime, Customer customer) {
-        this.joinlinetime = arrivaltime;
-    }
+    public double getTimeOfCreation() { return timeOfCreation; }
+    public double getServiceLength() { return serviceLength; }
+    public double getEndTime() { return endTime; }
+    public double getJobID() { return jobID; }
 
-    public int getJoinLineTime() {
-        return joinlinetime;
-    }
-  
-    public int getPaidTime() {
-        return paidtime;
-    }
-    
-    public void setPaidTime(int completionTime) {
-        this.paidtime = completionTime;
+    public Job(double currentTime, int ID) { timeOfCreation = currentTime; jobID = ID; }
+
+    public void completed(double currentTime) { serviceLength = currentTime - timeOfCreation; endTime = currentTime; }
+
+    public String toString() {
+        return "temp";
     }
 }

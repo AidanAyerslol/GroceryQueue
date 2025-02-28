@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d730d4d9-7c2c-4114-b5d5-f5338fff3ee5" name="Changes" comment="Add empty classes to build on top of.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArrivalProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrivalProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExponentialDistribution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExponentialDistribution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NormalDistribution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NormalDistribution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SingleServerQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleServerQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitTest/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/UnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitTest/UnitTestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/UnitTestResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StoreAisles.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +35,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "caleborchard"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;caleborchard&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AidanAyerslol/GroceryQueue.git",
-    "accountId": "f346e9b4-5899-4354-8111-109b4dc6ba11"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AidanAyerslol/GroceryQueue.git&quot;,
+    &quot;accountId&quot;: &quot;f346e9b4-5899-4354-8111-109b4dc6ba11&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -61,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "skeleton",
+    "git-widget-placeholder": "func__proto",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.lookFeel",
@@ -101,7 +104,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="skeleton" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>

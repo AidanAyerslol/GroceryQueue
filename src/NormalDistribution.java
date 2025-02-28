@@ -1,15 +1,35 @@
+import java.util.Random;
+
 public class NormalDistribution extends RandomDistribution {
     //Service time parameters
     private double mean;
     private double variance;
+    private double spare;
+    private boolean hasSpare = false;
+    private Random r = new Random();
+
 
     public NormalDistribution(double mean, double variance) {
         this.mean = mean;
         this.variance = variance;
     }
 
+    //Textbook uses Central Limit Theorem method to approximate normal, Box-Muller transform is more efficient since it directly generates a sample,
+    // and is more precise because it doesn't sum uniform numbers.
     @Override public double sample() {
-        //TODO: Generate and return sample from the normal distribution (pg 31 of 202 course notes)
-        return 0.0;
+        if(hasSpare) { hasSpare = false; return mean + Math.sqrt(variance) * spare; }
+
+        double u, v, s;
+        do {
+            u = 2.0 * r.nextDouble() - 1.0;
+            v = 2.0 * r.nextDouble() - 1.0;
+            s = (u * u) + (v * v);
+        } while (s >= 1 || s == 0);
+
+        double mult = Math.sqrt(-2.0 * Math.log(s) / s);
+        spare = v * mult;
+        hasSpare = true;
+
+        return mean + Math.sqrt(variance) * (u * mult);
     }
 }
