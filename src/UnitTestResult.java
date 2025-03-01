@@ -1,5 +1,3 @@
-package UnitTest;
-
 public class UnitTestResult {
     private int testsrun, testsfinished;
 

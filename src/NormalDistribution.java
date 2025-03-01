@@ -32,4 +32,44 @@ public class NormalDistribution extends RandomDistribution {
 
         return mean + Math.sqrt(variance) * (u * mult);
     }
+
+    public static UnitTestResult UnitTest() {
+        UnitTestResult result = new UnitTestResult();
+
+        // Test 1: Check statistical properties over many samples.
+        // Create a NormalDistribution with known mean and variance, using Central Limit Theorem method.
+        double expectedMean = 10.0;
+        double expectedVariance = 4.0;
+        NormalDistribution nd = new NormalDistribution(expectedMean, expectedVariance);
+
+        int sampleCount = 10000;
+        double sum = 0.0;
+        double sumSq = 0.0;
+        for (int i = 0; i < sampleCount; i++) {
+            double sample = nd.sample();
+            sum += sample;
+            sumSq += sample * sample;
+        }
+        double sampleMean = sum / sampleCount;
+        // Calculate variance using E[X^2] - (E[X])^2
+        double sampleVariance = (sumSq / sampleCount) - (sampleMean * sampleMean);
+
+        // Set acceptable tolerances (loose enough to account for random variation).
+        double toleranceMean = 0.1;
+        double toleranceVariance = 0.1;
+
+        boolean meanTestPassed = Math.abs(sampleMean - expectedMean) <= toleranceMean;
+        boolean varianceTestPassed = Math.abs(sampleVariance - expectedVariance) <= toleranceVariance;
+
+        result.recordNewTask(meanTestPassed);
+        result.recordNewTask(varianceTestPassed);
+
+        // Test 2: Check that consecutive calls yield distinct results (i.e. results are truly random).
+        double sample1 = nd.sample();
+        double sample2 = nd.sample();
+        boolean distinctSamples = sample1 != sample2;  // Extremely unlikely to be equal. Still technically possible
+        result.recordNewTask(distinctSamples);
+
+        return result;
+    }
 }
