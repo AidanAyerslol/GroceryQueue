@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d730d4d9-7c2c-4114-b5d5-f5338fff3ee5" name="Changes" comment="Add empty classes to build on top of.">
+    <list default="true" id="d730d4d9-7c2c-4114-b5d5-f5338fff3ee5" name="Changes" comment="Fix variable naming schemes throughout code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SingleServerQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleServerQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitTest/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/UnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitTest/UnitTestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest/UnitTestResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NormalDistribution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NormalDistribution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitTest/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitTest/UnitTestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTestResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +30,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "caleborchard"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;caleborchard&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AidanAyerslol/GroceryQueue.git",
-    "accountId": "f346e9b4-5899-4354-8111-109b4dc6ba11"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AidanAyerslol/GroceryQueue.git&quot;,
+    &quot;accountId&quot;: &quot;f346e9b4-5899-4354-8111-109b4dc6ba11&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -57,17 +55,33 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.UnitTest.executor": "Run",
+    "Application.UnitTests.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "skeleton",
+    "git-widget-placeholder": "func__proto",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="UnitTests" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="UnitTest" />
+      <module name="GroceryQueue" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,7 +101,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740177960566</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement functionality for ExponentialDistribution and NormalDistribution, remove redundant &quot;Customer&quot; class and flesh out Job class, turn specific LinkedList into a generic Queue class that can be used in future projects, as well as get ArrivalProcess and SingleServerQueue working. Delete StoreAisles class because we decided not to do that.">
+      <option name="closed" value="true" />
+      <created>1740785670833</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740785670833</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fix variable naming schemes throughout code">
+      <option name="closed" value="true" />
+      <created>1740857144885</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740857144885</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,7 +131,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="skeleton" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -115,6 +145,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add empty classes to build on top of." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add empty classes to build on top of." />
+    <MESSAGE value="Implement functionality for ExponentialDistribution and NormalDistribution, remove redundant &quot;Customer&quot; class and flesh out Job class, turn specific LinkedList into a generic Queue class that can be used in future projects, as well as get ArrivalProcess and SingleServerQueue working. Delete StoreAisles class because we decided not to do that." />
+    <MESSAGE value="Fix variable naming schemes throughout code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix variable naming schemes throughout code" />
   </component>
 </project>

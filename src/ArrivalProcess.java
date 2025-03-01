@@ -1,13 +1,8 @@
 public class ArrivalProcess {
-    ExponentialDistribution distribution;
-    int nextArrivalTime;
+    int jobcounter;
+    final double arrivalrate = 0.15; //Can change throughout the day, may be implemented in traffic project
+    ExponentialDistribution exponentialdistribution = new ExponentialDistribution(arrivalrate);
 
-    public int generateArrivalTime(){
-        //TODO: create an arrival time using exponential distribution, and return said arrival time as an int
-    }
-
-    public Job createJob(Customer customer, int arrivaltime) {
-        Job job = new Job(arrivaltime, customer);
-        return job;
-    }
+    public double getNextArrivalTime() { return exponentialdistribution.sample(); }
+    public Job getNextJob(double currentTime) { return new Job(currentTime, jobcounter++); }
 }

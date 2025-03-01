@@ -1,29 +1,32 @@
 public class SingleServerQueue {
-    //Put queue here when ya do that
+    private Queue<Job> queue;
     private Job jobinservice;
-    private int nextendservicetime;
-    private RandomDistribution servicetimedistribution;
+    private double nextendservicetime;
+    private NormalDistribution servicetimedistribution;
 
-    private LinkedList checkoutline;
-
-    public SingleServerQueue(RandomDistribution serviceTimeDistribution) {
-        this.servicetimedistribution = serviceTimeDistribution;
+    public SingleServerQueue() {
+        queue = new Queue<Job>();
         jobinservice = null;
-        nextendservicetime = 1000000000;
-        checkoutline = new LinkedList();
+        nextendservicetime = Double.MAX_VALUE;
+        servicetimedistribution = new NormalDistribution(0.5, ((double) 1 / 12));
     }
+
+    public int getLength() { return queue.getLength(); }
 
     public void add(Job job, double currenttime) {
-        //TODO: If no other jobs are going on,generate a service time, and jump to service right away. Otherwise, add to queue and schedule service time
+        if(jobinservice == null) { jobinservice = job; nextendservicetime = (currenttime + servicetimedistribution.sample()); }
+        else { queue.enqueue(job); }
     }
 
-    public double getEndServiceTime(RandomDistribution servicetimedistribution) {
-        //TODO: Generate an end service time using normal distribution
+    public double getEndServiceTime() {
         return nextendservicetime;
     }
 
     public Job complete(double currentTime) {
-        //TODO: Complete job in service, record finish time, start next queued up job and run generate service time
-        return null;
+        Job jobtocomplete = jobinservice;
+        jobtocomplete.completed(currentTime);
+        if(queue.isQueueEmpty()) { jobinservice = null; nextendservicetime = Double.MAX_VALUE; }
+        else { jobinservice = queue.dequeue(); nextendservicetime = currentTime + servicetimedistribution.sample(); }
+        return jobtocomplete;
     }
 }
