@@ -23,10 +23,10 @@ public class SingleServerQueue {
     }
 
     public Job complete(double currentTime) {
-        Job jobToComplete = jobinservice;
-        jobToComplete.completed(currentTime);
+        Job jobtocomplete = jobinservice;
+        jobtocomplete.completed(currentTime);
         if(queue.isQueueEmpty()) { jobinservice = null; nextendservicetime = Double.MAX_VALUE; }
         else { jobinservice = queue.dequeue(); nextendservicetime = currentTime + servicetimedistribution.sample(); }
-        return jobToComplete;
+        return jobtocomplete;
     }
 }

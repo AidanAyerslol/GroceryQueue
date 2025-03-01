@@ -5,7 +5,7 @@ public class NormalDistribution extends RandomDistribution {
     private double mean;
     private double variance;
     private double spare;
-    private boolean hasSpare = false;
+    private boolean hasspare = false;
     private Random r = new Random();
 
 
@@ -17,7 +17,7 @@ public class NormalDistribution extends RandomDistribution {
     //Textbook uses Central Limit Theorem method to approximate normal, Box-Muller transform is more efficient since it directly generates a sample,
     // and is more precise because it doesn't sum uniform numbers.
     @Override public double sample() {
-        if(hasSpare) { hasSpare = false; return mean + Math.sqrt(variance) * spare; }
+        if(hasspare) { hasspare = false; return mean + Math.sqrt(variance) * spare; }
 
         double u, v, s;
         do {
@@ -28,7 +28,7 @@ public class NormalDistribution extends RandomDistribution {
 
         double mult = Math.sqrt(-2.0 * Math.log(s) / s);
         spare = v * mult;
-        hasSpare = true;
+        hasspare = true;
 
         return mean + Math.sqrt(variance) * (u * mult);
     }

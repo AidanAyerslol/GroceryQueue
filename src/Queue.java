@@ -1,10 +1,10 @@
 public class Queue<T> {
     private class QueueRecord {
         public T value;
-        public QueueRecord nextRecord;
+        public QueueRecord nextrecord;
 
         public QueueRecord(T value) {
-            this.value = value; this.nextRecord = null;
+            this.value = value; this.nextrecord = null;
         }
     }
 
@@ -19,19 +19,19 @@ public class Queue<T> {
     }
 
     public void enqueue(T value) {
-        QueueRecord newRecord = new QueueRecord(value);
+        QueueRecord newrecord = new QueueRecord(value);
 
-        if(head == null) { head = newRecord; current = newRecord; }
-        else { current.nextRecord = newRecord; current = newRecord; }
+        if(head == null) { head = newrecord; current = newrecord; }
+        else { current.nextrecord = newrecord; current = newrecord; }
         length++;
     }
 
     public T dequeue() {
-        QueueRecord returnRecord = head;
+        QueueRecord returnrecord = head;
         if(head == null) { return null; }
         else if(current == head) { head = null; current = null; }
-        else { head = head.nextRecord; }
+        else { head = head.nextrecord; }
         length--;
-        return returnRecord.value;
+        return returnrecord.value;
     }
 }

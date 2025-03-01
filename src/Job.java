@@ -1,19 +1,20 @@
 public class Job {
-    private double timeOfCreation;
-    private double serviceLength;
-    private double endTime;
+    private double timeofcreation;
+    private double servicelength;
+    private double endtime;
     private int jobID;
 
-    public double getTimeOfCreation() { return timeOfCreation; }
-    public double getServiceLength() { return serviceLength; }
-    public double getEndTime() { return endTime; }
+    public double getTimeOfCreation() { return timeofcreation; }
+    public double getServiceLength() { return servicelength; }
+    public double getEndTime() { return endtime; }
     public double getJobID() { return jobID; }
 
-    public Job(double currentTime, int ID) { timeOfCreation = currentTime; jobID = ID; }
+    public Job(double currentTime, int ID) { timeofcreation = currentTime; jobID = ID; }
 
-    public void completed(double currentTime) { serviceLength = currentTime - timeOfCreation; endTime = currentTime; }
+    public void completed(double currentTime) { servicelength = currentTime - timeofcreation; endtime = currentTime; }
 
     public String toString() {
+        //TODO: Properly implement toString method for Job
         return "temp";
     }
 }
