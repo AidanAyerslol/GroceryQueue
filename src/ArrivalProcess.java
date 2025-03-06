@@ -1,11 +1,11 @@
 public class ArrivalProcess {
     int jobcounter;
-    double arrivalrate; //Can change throughout the day, may be implemented in traffic project
-    ExponentialDistribution exponentialdistribution = new ExponentialDistribution(arrivalrate);
+    double arrivalRate; //Can change throughout the day, may be implemented in traffic project
+    ExponentialDistribution exponentialdistribution = new ExponentialDistribution(arrivalRate);
 
     // constructor
-    ArrivalProcess(double arrivalrate) {
-        this.arrivalrate = arrivalrate;
+    ArrivalProcess(double arrivalRate) {
+        this.arrivalRate = arrivalRate;
     }
 
     public double getNextArrivalTime() { return exponentialdistribution.sample(); }
