@@ -2,12 +2,8 @@ public class Main {
     public static void main(String[] args) {
     // setting simulation parameters
     int simulationEndTime = 560; // 9 hours * 60 minutes (we can change it later)
-    double arrivalRate = 0.15; //  assume average arrival time 15 jobs per minute
-    double averageShoppingRate = 0.1; // assume average shopping time 10 minutes
-
-    ExponentialDistribution shoppingTimeDistribution = new ExponentialDistribution(averageShoppingRate);
-    // create a functionality for exponential distribution for checkout time and change the hard coded distribution in Single Ever Queue class
-
-
+    double arrivalRate = 0.15; //  assume 0.15 arrivals per minute (1 arrival in every 6.67 minutes)
+    double shoppingRate = 0.1; // assume average shopping time 10 minutes
+    double checkoutRate = 0.02; // assume average checkout time 5 minutes
     }
 }
