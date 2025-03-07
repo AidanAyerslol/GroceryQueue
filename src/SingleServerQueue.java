@@ -2,13 +2,15 @@ public class SingleServerQueue {
     private Queue<Job> queue;
     private Job jobinservice;
     private double nextendservicetime;
-    private NormalDistribution servicetimedistribution;
+    private double checkoutRate;
+    private ExponentialDistribution servicetimedistribution;
 
-    public SingleServerQueue() {
+    public SingleServerQueue(double checkoutRate) {
         queue = new Queue<Job>();
         jobinservice = null;
         nextendservicetime = Double.MAX_VALUE;
-        servicetimedistribution = new NormalDistribution(0.5, ((double) 1 / 12));
+        this.checkoutRate = checkoutRate;
+        servicetimedistribution = new ExponentialDistribution(checkoutRate);
     }
 
     public int getLength() { return queue.getLength(); }
