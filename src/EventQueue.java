@@ -9,7 +9,7 @@ public class EventQueue extends Queue<Event> {
             length++;
             return;
         }
-        if (((Event) head.value).getTime() > newEvent.getTime()) {
+        if ((head.value).getTime() > newEvent.getTime()) {
             newRecord.nextrecord = head;
             head = newRecord;
             length++;
@@ -17,7 +17,7 @@ public class EventQueue extends Queue<Event> {
         }
 
         QueueRecord currentRecord = head;
-        while (currentRecord.nextrecord != null && ((Event) currentRecord.nextrecord.value).getTime() <= newEvent.getTime()) {
+        while (currentRecord.nextrecord != null && (currentRecord.nextrecord.value).getTime() <= newEvent.getTime()) {
             currentRecord = currentRecord.nextrecord;
         }
 

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d730d4d9-7c2c-4114-b5d5-f5338fff3ee5" name="Changes" comment="Fix variable naming schemes throughout code">
-      <change afterPath="$PROJECT_DIR$/src/EventQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue.java" afterDir="false" />
-    </list>
+    <list default="true" id="d730d4d9-7c2c-4114-b5d5-f5338fff3ee5" name="Changes" comment="Fix variable naming schemes throughout code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
