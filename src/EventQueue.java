@@ -30,4 +30,10 @@ public class EventQueue extends Queue<Event> {
 
         length++;
     }
+
+    // To Test if the enqueue method is working fine
+    public Event peekHead() {
+        if (head == null) return null;
+        return head.value;
+    }
 }
