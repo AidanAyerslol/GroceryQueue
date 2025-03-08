@@ -4,16 +4,18 @@ public class Simulation {
     private ArrivalProcess arrivalProcess;
     private SingleServerQueue singleServerQueue;
     private ExponentialDistribution shoppingTimeDistribution;
+    private boolean bagger;
 
     // Simulation constructor
-    public Simulation(double simulationEndTime, double arrivalRate, double shoppingRate, double checkoutRate) {
+    public Simulation(double simulationEndTime, double arrivalRate, double shoppingRate, double checkoutRate, Boolean bagger) {
         this.simulationEndTime = simulationEndTime;
         this.currentTime = 0.0;
+        this.bagger = bagger;
 
         // shopping time distribution
         this.shoppingTimeDistribution = new ExponentialDistribution(shoppingRate);
         this.arrivalProcess = new ArrivalProcess(arrivalRate); // initialize arrival process with arrival rate form main function
-        this.singleServerQueue = new SingleServerQueue(checkoutRate); // initialize single server queue with checkout rate from main function
+        this.singleServerQueue = new SingleServerQueue(checkoutRate, bagger); // initialize single server queue with checkout rate from main function
 
         // other initialization process ... to be done
     }
