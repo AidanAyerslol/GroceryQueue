@@ -34,4 +34,12 @@ public class Queue<T> {
         length--;
         return returnrecord.value;
     }
+
+    public static UnitTestResult UnitTest() {
+        UnitTestResult result = new UnitTestResult();
+
+        result.recordNewTask(true);
+
+        return result;
+    }
 }
