@@ -5,8 +5,9 @@ public class Main {
     double arrivalRate = 0.15; //  assume 0.15 arrivals per minute (1 arrival in every 6.67 minutes)
     double shoppingRate = 0.1; // assume average shopping time 10 minutes
     double checkoutRate = 0.02; // assume average checkout time 5 minutes
+    Boolean bagger = true;
 
-        Simulation simulation = new Simulation(simulationEndTime, arrivalRate, shoppingRate, checkoutRate);
+        Simulation simulation = new Simulation(simulationEndTime, arrivalRate, shoppingRate, checkoutRate, bagger);
         simulation.run();
     }
 }

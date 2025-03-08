@@ -5,18 +5,27 @@ public class SingleServerQueue {
     private double checkoutRate;
     private ExponentialDistribution servicetimedistribution;
 
-    public SingleServerQueue(double checkoutRate) {
+    private boolean doubleStaffed;
+
+    private final double DOUBLESTAFF_RATE = 0.5;
+
+    public SingleServerQueue(double checkoutRate, boolean bagger) {
         queue = new Queue<Job>();
         jobinservice = null;
         nextendservicetime = Double.MAX_VALUE;
         this.checkoutRate = checkoutRate;
         servicetimedistribution = new ExponentialDistribution(checkoutRate);
+        doubleStaffed = bagger;
     }
 
     public int getLength() { return queue.getLength(); }
 
     public void add(Job job, double currenttime) {
-        if(jobinservice == null) { jobinservice = job; nextendservicetime = (currenttime + servicetimedistribution.sample()); }
+        if(jobinservice == null) {
+            jobinservice = job;
+            if (doubleStaffed){nextendservicetime = (currenttime + (servicetimedistribution.sample() * DOUBLESTAFF_RATE)); }
+            else {nextendservicetime = (currenttime + servicetimedistribution.sample());}
+        }
         else { queue.enqueue(job); }
     }
 
@@ -28,7 +37,9 @@ public class SingleServerQueue {
         Job jobtocomplete = jobinservice;
         jobtocomplete.completed(currentTime);
         if(queue.isQueueEmpty()) { jobinservice = null; nextendservicetime = Double.MAX_VALUE; }
-        else { jobinservice = queue.dequeue(); nextendservicetime = currentTime + servicetimedistribution.sample(); }
+        else { jobinservice = queue.dequeue();
+            if (doubleStaffed){nextendservicetime = (currentTime + (servicetimedistribution.sample() * DOUBLESTAFF_RATE)); }
+            else {nextendservicetime = (currentTime + servicetimedistribution.sample());} }
         return jobtocomplete;
     }
 
@@ -38,7 +49,7 @@ public class SingleServerQueue {
         int jobId = 1;
         double currentTime = 0.0;
         double checkoutRate = 1.0;
-        SingleServerQueue queue = new SingleServerQueue(checkoutRate);
+        SingleServerQueue queue = new SingleServerQueue(checkoutRate, false);
 
         // Test initial state
         result.recordNewTask(queue.getLength() == 0);
