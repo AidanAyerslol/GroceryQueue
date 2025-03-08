@@ -18,5 +18,7 @@ public class UnitTest {
         //totalTests.factorResults(ExampleClass.UnitTest());
         totaltests.factorResults(NormalDistribution.UnitTest());
         totaltests.factorResults(Queue.UnitTest());
+        totaltests.factorResults(SingleServerQueue.UnitTest());
+        totaltests.factorResults(Job.UnitTest());
     }
 }
