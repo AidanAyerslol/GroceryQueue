@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
+    <list default="true" id="d730d4d9-7c2c-4114-b5d5-f5338fff3ee5" name="Changes" comment="Fix variable naming schemes throughout code" />
+
     <list default="true" id="d730d4d9-7c2c-4114-b5d5-f5338fff3ee5" name="Changes" comment="Unit tests added to Queue, SingleServerQueue, and Job. Job's toString method implemented.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Job.java" afterDir="false" />
@@ -11,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/src/SingleServerQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SingleServerQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitTest.java" afterDir="false" />
     </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +70,11 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+
+    "git-widget-placeholder": "EventHandler",
+
     "git-widget-placeholder": "queueunittests",
+
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.lookFeel",

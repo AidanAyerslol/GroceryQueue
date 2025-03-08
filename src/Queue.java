@@ -1,5 +1,5 @@
 public class Queue<T> {
-    private class QueueRecord {
+    protected class QueueRecord {
         public T value;
         public QueueRecord nextrecord;
 
@@ -8,8 +8,8 @@ public class Queue<T> {
         }
     }
 
-    private int length;
-    private QueueRecord head, current;
+    protected int length;
+    protected QueueRecord head, current;
 
     public int getLength() { return length; }
     public boolean isQueueEmpty() { return (length == 0); }
