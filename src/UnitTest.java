@@ -20,5 +20,6 @@ public class UnitTest {
         totaltests.factorResults(Queue.UnitTest());
         totaltests.factorResults(SingleServerQueue.UnitTest());
         totaltests.factorResults(Job.UnitTest());
+        totaltests.factorResults(Simulation.UnitTest());
     }
 }
